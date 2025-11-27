@@ -53,7 +53,7 @@ jobs:
           push: true
           context: .
           platforms: linux/arm64
-          tags: ghcr.io/cssag/cloud-image-restic-exporter:${{ steps.image_tag.outputs.tag }}
+          tags: ghcr.io/cssag/restic-exporter:${{ steps.image_tag.outputs.tag }}
 
       - name: Build image (no push)
         if: github.event_name == 'pull_request'
@@ -62,4 +62,4 @@ jobs:
           push: false
           context: .
           platforms: linux/arm64
-          tags: ghcr.io/cssag/cloud-image-restic-exporter:${{ steps.image_tag.outputs.tag }}
+          tags: ghcr.io/cssag/restic-exporter:${{ steps.image_tag.outputs.tag }}
